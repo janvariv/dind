@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM ubuntu
 MAINTAINER viktor.janvari@anyvan.com
 
 # Install the magic wrapper.
@@ -24,7 +24,7 @@ RUN apt-get update \
         apt-transport-https \
         software-properties-common \
     && chmod +x /usr/local/bin/wrapdocker \
-    && rm -rf /var/cache/apk/*
+    && apt-get clean
 
 # Define additional metadata for our image.
 VOLUME /var/lib/docker
