@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM phusion/baseimage
 MAINTAINER viktor.janvari@anyvan.com
 
 # Install the magic wrapper.
@@ -12,6 +12,17 @@ RUN apt-get update \
         ca-certificates \
         e2fsprogs \
         docker \
+        git \
+        curl \
+        jq \
+        vim \
+        nano \
+        make \
+        unzip \
+        sudo \
+        wget \
+        apt-transport-https \
+        software-properties-common
     && chmod +x /usr/local/bin/wrapdocker \
     && rm -rf /var/cache/apk/*
 
