@@ -22,7 +22,7 @@ RUN apt-get update \
         sudo \
         wget \
         apt-transport-https \
-        software-properties-common
+        software-properties-common \
     && chmod +x /usr/local/bin/wrapdocker \
     && rm -rf /var/cache/apk/*
 
